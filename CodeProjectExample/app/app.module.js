@@ -18,7 +18,7 @@ var home_component_1 = require("./components/home.component");
 var knob_component_1 = require("./components/knob.component");
 var user_service_1 = require("./Service/user.service");
 var user_component_1 = require("./components/user.component");
-var user_pipe_1 = require("./filter/user.pipe");
+//import { UserFilterPipe } from './filter/user.pipe';
 //import { SearchComponent } from './Shared/search.component';
 var AppModule = (function () {
     function AppModule() {
@@ -26,7 +26,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing, ng2_bs3_modal_1.Ng2Bs3ModalModule],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, knob_component_1.KnobComponent, user_component_1.UserComponent, user_pipe_1.UserFilterPipe],
+            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, knob_component_1.KnobComponent, user_component_1.UserComponent],
             providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService],
             bootstrap: [app_component_1.AppComponent]
         })

@@ -10,12 +10,12 @@ import { HomeComponent } from './components/home.component';
 import { KnobComponent } from './components/knob.component';
 import { UserService } from './Service/user.service';
 import { UserComponent } from './components/user.component';
-//import { UserFilterPipe } from './filter/user.pipe';
-//import { SearchComponent } from './Shared/search.component';
+import { UserFilterPipe } from './filter/user.pipe';
+import { SearchComponent } from './Shared/search.component';
 
 @NgModule({
-    imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing, Ng2Bs3ModalModule],
-    declarations: [AppComponent, HomeComponent, KnobComponent, UserComponent],
+    imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing, Ng2Bs3ModalModule, FormsModule],
+    declarations: [AppComponent, HomeComponent, KnobComponent, UserComponent, SearchComponent, UserFilterPipe],
     providers: [{ provide: APP_BASE_HREF, useValue: '/' }, UserService],
     bootstrap: [AppComponent]
 })

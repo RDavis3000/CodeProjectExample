@@ -20,6 +20,7 @@ var user_service_1 = require("./Service/user.service");
 var user_component_1 = require("./components/user.component");
 var user_pipe_1 = require("./filter/user.pipe");
 var search_component_1 = require("./Shared/search.component");
+var errorhandler_1 = require("./Shared/errorhandler");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,7 +28,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing, ng2_bs3_modal_1.Ng2Bs3ModalModule, forms_1.FormsModule],
             declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, knob_component_1.KnobComponent, user_component_1.UserComponent, search_component_1.SearchComponent, user_pipe_1.UserFilterPipe],
-            providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService],
+            providers: [{ provide: core_1.ErrorHandler, useClass: errorhandler_1.default }, { provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
